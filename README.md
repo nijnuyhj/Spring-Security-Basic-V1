@@ -1,12 +1,15 @@
-MySQL DB 및 사용자 생성
+# Spring Security Basic V1
 
+---
+### MySQL DB및 사용자 생성
+```
 create user 'cos'@'%' identified by 'cos1234';
 GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
 create database security;
 use security;
-
-yml파일 설정
-
+```
+### yml파일 설정
+```
 server:
   port: 8080
   servlet:
@@ -32,7 +35,9 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+```
+### localhost:8080/login창
 
-localhost:8080/login창에서
-ID에 user
-PW에 터미널에 나온 비밀번호 값 입력하면 된다.
+ID : user
+
+PW : 터미널 security password
